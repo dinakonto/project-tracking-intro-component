@@ -24,7 +24,7 @@ $pg-margin: 32px
  */
 *
   box-sizing: border-box
-  // transition: all 0.2s ease-in-out
+  transition: background 0.2s ease-in-out
 body
   margin: 0
   height: 100%
@@ -37,19 +37,37 @@ h1, h2, h3, h4, h5, h6
   font-family: $font-stack-headings
   font-weight: $font-weight-headings-bold
   color: $col-neutral-xdark
+h1
+  text-transform: uppercase
+  font-size: 2.25em
+  margin-top: 10px
+  margin-bottom: 0
+  line-height: 1.1
+h1 span
+  display: inline-block
+p
+  line-height: 1.5
 button
   text-transform: uppercase
   font-family: $font-stack-headings
   font-weight: $font-weight-headings-bold
+  background: $col-primary
+  color: white
+  border: none
+  padding: 12px 24px
+  letter-spacing: 2px
+  border-radius: 6px
 
 .wrapper
   margin: 0 $pg-margin
   position: relative
+  padding-bottom: 90px
 .wrapper::before
   position: absolute
   content: ""
   width: 50vw
   height: 112vw
+  max-height: 600px
   background: $col-neutral-light
   z-index: -100
   border-bottom-left-radius: 60px
@@ -58,6 +76,8 @@ button
 .inner-wrap
   max-width: 1110px
   margin: 0 auto
+.new-line
+  display: block
 .hide
   display: none
 
@@ -70,6 +90,8 @@ header .inner-wrap
   align-items: center
 .logo
   width: 24px
+.logo img
+  max-width: 100%
 nav
   position: absolute
   top: 100px
@@ -109,19 +131,36 @@ nav a:hover
   margin-top: 10px
   display: grid
   grid-template-columns: 1fr
+  align-items: center
 .imagery
   background: url("../../images/illustration-devices.svg") no-repeat
   background-size: cover
   height: 64vw
-  width: calc(100% + 32px)
-// .imagery
-//   height: 64vw
-  // width: calc(100% + 32px + 20px)
-//   overflow: hidden
-//   margin-left: -20px
-// .imagery img
-//   height: 100%
-
+  width: calc(100% + 32px + 20px)
+  margin-bottom: 20px
+  margin-left: -20px
+.subject-line
+  text-transform: uppercase
+  font-family: $font-stack-headings
+  letter-spacing: 5px
+  font-size: 0.85em
+  color: $col-neutral-medium
+.tag
+  background: $col-neutral-xdark
+  color: white
+  border-radius: 100px
+  padding: 3px 10px 4px 10px
+  font-weight: $font-weight-headings-bold
+  letter-spacing: 1px
+  margin-right: 10px
+.cta p
+  display: inline-block
+  text-transform: uppercase
+  font-family: $font-stack-headings
+  font-size: 0.8em
+  letter-spacing: 2px
+  color: $col-neutral-medium
+  margin-left: 20px
 
 
 
@@ -137,7 +176,7 @@ nav a:hover
     height: 430px
   // HEADER
   .logo
-    width: auto
+    width: 32px
   .nav-toggle
     display: none
   nav
@@ -168,16 +207,38 @@ nav a:hover
     margin-right: 40px
     font-size: 1em
     color: $col-neutral-medium
-
   // HERO
   #hero
     grid-template-columns: 1fr 1fr
     max-width: 1110px
     margin: 0 auto
   .imagery
-    width: calc(100% + 32px)
     height: 50vw
-    max-height: 455px
+    max-height: 400px
+    margin-bottom: 0
+    background-position: 35px
+    width: calc(100% + 52px)
   .text
     grid-column-start: 1
     grid-row-start: 1
+
+@media screen and (min-width: 900px)
+  header
+    padding: 60px 0
+  main
+    margin-top: 55px
+  h1
+    font-size: 3.4em
+  .cta
+    margin-top: 65px
+  .cta p
+    font-size: 0.9em
+    letter-spacing: 4px
+  button
+    font-size: 0.85em
+    padding: 16px 30px
+
+@media screen and (min-width: 1170px)
+  .imagery
+    width: calc(100% + 52px + (100vw - 1170px / 2))
+    background-size: contain
