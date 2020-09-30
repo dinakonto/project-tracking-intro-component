@@ -1,3 +1,24 @@
+/* * BASE LAYOUT
+ * */
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
 
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #5b5f71;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  color: #242942;
+}
 
 /*# sourceMappingURL=styles.css.map */

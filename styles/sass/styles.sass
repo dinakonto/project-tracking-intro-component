@@ -1,0 +1,34 @@
+// STYLEGUIDE
+$col-primary: hsl(0, 100%, 68%)
+$col-neutral-light: hsl(207, 33%, 95%)
+$col-neutral-medium: hsl(231, 7%, 65%)
+$col-neutral-dark: hsl(230, 11%, 40%)
+$col-neutral-xdark: hsl(230, 29%, 20%)
+
+$font-base-size: 18px
+
+$font-stack-headings: 'Barlow Condensed', sans-serif
+$font-weight-headings-regular: 400
+$font-weight-headings-bold: 700
+$font-stack-body: 'Barlow', sans-serif
+$font-weight-body: 400
+
+
+/*
+ * BASE LAYOUT
+ */
+*
+  box-sizing: border-box
+  transition: all 0.2s ease-in-out
+body
+  margin: 0
+  height: 100%
+  width: 100%
+  font-family: $font-stack-body
+  font-weight: $font-weight-body
+  font-size: $font-base-size
+  color: $col-neutral-dark
+h1, h2, h3, h4, h5, h6
+  font-family: $font-stack-headings
+  font-weight: $font-weight-headings-bold
+  color: $col-neutral-xdark
