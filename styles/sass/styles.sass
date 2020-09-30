@@ -34,8 +34,6 @@ h1, h2, h3, h4, h5, h6
   font-family: $font-stack-headings
   font-weight: $font-weight-headings-bold
   color: $col-neutral-xdark
-img
-  max-width: 100%
 button
   text-transform: uppercase
   font-family: $font-stack-headings
@@ -43,9 +41,22 @@ button
 
 .wrapper
   margin: 0 $pg-margin
+  position: relative
+.wrapper::before
+  position: absolute
+  content: ""
+  width: 50vw
+  height: 112vw
+  background: $col-neutral-light
+  z-index: -100
+  border-bottom-left-radius: 60px
+  top: 0
+  right: -$pg-margin
 .inner-wrap
   max-width: 1110px
   margin: 0 auto
+.hide
+  display: none
 
 // HEADER
 header
@@ -90,6 +101,19 @@ nav ul li a
 nav a:hover
   text-decoration: underline
 
+// HERO
+#hero
+  margin-top: 10px
+  display: grid
+.imagery
+  height: 64vw
+  width: calc(100% + 32px + 20px)
+  overflow: hidden
+  margin-left: -20px
+.imagery img
+  height: 100%
+
+
 
 
 
@@ -97,6 +121,8 @@ nav a:hover
 
 
 @media screen and (min-width: 700px)
+  .hide
+    display: inherit
   // HEADER
   .logo
     width: auto
