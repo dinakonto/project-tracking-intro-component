@@ -117,22 +117,24 @@ nav a:hover {
 #hero {
   margin-top: 10px;
   display: grid;
+  grid-template-columns: 1fr;
 }
 
 .imagery {
+  background: url("../../images/illustration-devices.svg") no-repeat;
+  background-size: cover;
   height: 64vw;
-  width: calc(100% + 32px + 20px);
-  overflow: hidden;
-  margin-left: -20px;
-}
-
-.imagery img {
-  height: 100%;
+  width: calc(100% + 32px);
 }
 
 @media screen and (min-width: 700px) {
   .hide {
     display: inherit;
+  }
+
+  .wrapper::before {
+    width: 50vw;
+    height: 430px;
   }
 
   .logo {
@@ -181,6 +183,23 @@ nav a:hover {
     margin-right: 40px;
     font-size: 1em;
     color: #a0a1ac;
+  }
+
+  #hero {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  .imagery {
+    width: calc(100% + 32px);
+    height: 50vw;
+    max-height: 455px;
+  }
+
+  .text {
+    grid-column-start: 1;
+    grid-row-start: 1;
   }
 }
 
